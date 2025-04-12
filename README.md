@@ -55,7 +55,7 @@ payload = {
   user_id: 123_456,
   action: :authenticate
 }
-encrypted_data = RubyMagicLink::Token.create(payload, expires_in: Time.now.to_i + 3600)
+encrypted_data = RubyMagicLink::Token.create(payload, expires_in: 3600)
 url = "https://example.com/magic_links?data=#{encrypted_data}"
 
 # Send the generated URL in an email or through other communication channels.
